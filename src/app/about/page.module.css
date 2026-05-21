@@ -1,0 +1,676 @@
+.aboutImage {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.aboutImage img { width: 100%; height: 100%; object-fit: cover; }
+
+.muted { color: var(--grey); }
+
+.focusList { max-width: 880px; margin: 0 auto; }
+
+.ctaPrimaryGold {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+}
+
+/* ---------- Split hero ---------- */
+.heroSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.heroLeft {
+  position: relative;
+  background: #d9cfbd;
+  background-image: linear-gradient(135deg, #d9cfbd 0%, #e2d8c6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.verticalLabel {
+  position: absolute;
+  left: 2.2rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  color: rgba(120, 105, 80, 0.7);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.heroPortrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.heroImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 18, 14, 0) 45%,
+    rgba(20, 18, 14, 0.55) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.heroNameplate {
+  position: absolute;
+  left: 2.8rem;
+  right: 2.8rem;
+  bottom: 2.5rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  color: #f5efe2;
+  pointer-events: none;
+}
+
+.heroNameplateLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #d6c79a;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.heroNameplateName {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1;
+  color: #f5efe2;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.heroNameplateRule {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: #c9a96b;
+  margin: 1.1rem 0 0.9rem;
+}
+
+.heroNameplateTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 226, 0.85);
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .heroNameplate {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.6rem;
+  }
+}
+
+.portraitPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(120, 105, 80, 0.75);
+}
+
+.portraitCircle {
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(120, 105, 80, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portraitCircle svg {
+  width: 38px;
+  height: 38px;
+  stroke: rgba(120, 105, 80, 0.6);
+  fill: none;
+  stroke-width: 1.2;
+}
+
+.portraitCaption {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.portraitCaption span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  opacity: 0.7;
+  margin-top: 0.4rem;
+}
+
+.cornerArc {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(120, 105, 80, 0.3);
+  border-radius: 50%;
+}
+
+.heroRight {
+  background: #f5efe2;
+  padding: 5rem 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #b89968;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 38px;
+  height: 1px;
+  background: #b89968;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 2.2rem;
+  color: #1a1a1a;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+
+.heroBody p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  margin: 0 0 1.4rem;
+  font-weight: 300;
+}
+
+.locationPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2.5rem;
+}
+
+.locationPill {
+  border: 1px solid rgba(120, 95, 45, 0.55);
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6e5520;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- International Network ---------- */
+.networkSection {
+  background: #0a1628;
+  padding: 6rem 0;
+}
+
+.networkInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.eyebrowDark {
+  color: #b89968;
+}
+
+.eyebrowDark::before {
+  background: #b89968;
+}
+
+.networkTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f5efe2;
+  margin: 1.5rem 0 0;
+}
+
+.networkTitle em {
+  font-style: italic;
+  color: #c9a96b;
+  font-weight: 400;
+}
+
+.networkRight p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #b8bfca;
+  font-weight: 300;
+  margin: 0 0 2rem;
+}
+
+.networkQuote {
+  margin: 0;
+  padding: 0.3rem 0 0.3rem 1.5rem;
+  border-left: 1px solid rgba(201, 169, 107, 0.6);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #d6cfc1;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .networkSection {
+    padding: 3.5rem 0;
+  }
+  .networkInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* ---------- CTA section (matches network template) ---------- */
+.ctaSection {
+  background: #0a1628;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(201, 169, 107, 0.15);
+}
+
+.ctaInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.ctaTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f5efe2;
+  margin: 1.5rem 0 0;
+}
+
+.ctaTitle em {
+  font-style: italic;
+  color: #c9a96b;
+  font-weight: 400;
+}
+
+.ctaRight p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #b8bfca;
+  font-weight: 300;
+  margin: 0 0 1.4rem;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ctaPrimary {
+  background: #c9a96b;
+  color: #0a1628;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.ctaPrimary:hover {
+  background: #d6b87a;
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #f5efe2;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 239, 226, 0.4);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-color 0.2s ease;
+}
+
+.ctaSecondary:hover {
+  border-color: #c9a96b;
+  color: #c9a96b;
+}
+
+@media (max-width: 900px) {
+  .ctaSection {
+    padding: 3.5rem 0;
+  }
+  .ctaInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* ---------- Areas of Focus ---------- */
+.focusSection {
+  background: #f5efe2;
+  padding: 5rem 0;
+}
+
+.focusInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.focusTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin: 2.5rem 0 3rem;
+  max-width: 720px;
+}
+
+.focusTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+}
+
+.focusGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+  border-top: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusItem:nth-child(odd) {
+  border-right: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusItem:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-content: center;
+  border-right: none;
+}
+
+.focusNumber {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  color: #b89968;
+  letter-spacing: 0.1em;
+  min-width: 1.5rem;
+}
+
+.focusLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #2a2a2a;
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  .focusSection {
+    padding: 3rem 0;
+  }
+  .focusInner {
+    padding: 0 1.5rem;
+  }
+  .focusGrid {
+    grid-template-columns: 1fr;
+  }
+  .focusItem:nth-child(odd) {
+    border-right: none;
+  }
+}
+
+/* ---------- Relationship-Led Approach ---------- */
+.approachSection {
+  background: #e7ddc9;
+  padding: 5rem 0;
+}
+
+.approachInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+.approachSticky {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.approachContent p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  font-weight: 300;
+  margin: 0 0 1.6rem;
+}
+
+.lightQuote {
+  margin: 1.5rem 0 0;
+  padding: 0.3rem 0 0.3rem 1.5rem;
+  border-left: 1px solid rgba(184, 153, 104, 0.6);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .approachSticky {
+    position: static;
+  }
+}
+
+.approachTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 1.8rem;
+}
+
+.approachTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+}
+
+.approachLeft p,
+.approachRight p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  font-weight: 300;
+  margin: 0 0 1.4rem;
+}
+
+.experienceCard {
+  margin-top: 2.5rem;
+  background: #ded2bb;
+  border-radius: 4px;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.experienceNumber {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #b89968;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.experienceNumber span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  margin-top: 0.9rem;
+  font-weight: 400;
+}
+
+.experienceDivider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(120, 105, 80, 0.35);
+}
+
+.experienceText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .experienceCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.5rem 1.2rem;
+  }
+  .experienceDivider {
+    width: 60px;
+    height: 1px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .approachSection {
+    padding: 3rem 0;
+  }
+  .approachInner {
+    padding: 0 1.5rem;
+  }
+  .approachGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroSplit {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .heroLeft {
+    min-height: 60vh;
+  }
+  .heroPortrait {
+    object-position: center 15%;
+  }
+  .heroRight {
+    padding: 3rem 1.5rem;
+  }
+  .verticalLabel {
+    left: 1rem;
+  }
+}

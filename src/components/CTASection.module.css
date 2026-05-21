@@ -1,0 +1,194 @@
+.ctaSection {
+  position: relative;
+  background: #0c1830;
+  color: #f4ecd8;
+  padding: 110px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 760px;
+}
+
+.ctaEyebrow {
+  color: #c9a14a;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  margin-bottom: 14px;
+}
+
+.ctaTopOrnament {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.ctaTopLine {
+  width: 36px;
+  height: 1px;
+  background: rgba(201, 161, 74, 0.55);
+}
+
+.ctaTopDiamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a14a;
+  transform: rotate(45deg);
+}
+
+.ctaHeading {
+  color: #f4ecd8 !important;
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  line-height: 1.15;
+  margin: 0 0 26px;
+  max-width: 640px;
+}
+
+.ctaParagraph {
+  color: rgba(244, 236, 216, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 0 36px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.ctaBtnPrimary {
+  background: #c9a14a;
+  color: #0c1830;
+}
+
+.ctaBtnPrimary:hover {
+  background: #d8b264;
+}
+
+.ctaBtnGhost {
+  background: transparent;
+  color: #f4ecd8;
+  border: 1px solid rgba(244, 236, 216, 0.35);
+}
+
+.ctaBtnGhost:hover {
+  border-color: rgba(244, 236, 216, 0.7);
+}
+
+.ctaBtnArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.ctaBtnPrimary .ctaBtnArrow {
+  background: #0c1830;
+  color: #c9a14a;
+}
+
+.ctaBtnGhost .ctaBtnArrow {
+  background: rgba(244, 236, 216, 0.12);
+  color: #f4ecd8;
+}
+
+.ctaBtn:hover .ctaBtnArrow {
+  transform: translateX(2px);
+}
+
+.ctaSideOrnament {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 22%;
+  max-width: 240px;
+  pointer-events: none;
+}
+
+.ctaSideLeft {
+  left: 0;
+}
+
+.ctaSideRight {
+  right: 0;
+  justify-content: flex-end;
+}
+
+.ctaSideLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(201, 161, 74, 0.45);
+}
+
+.ctaSideDiamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a14a;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .ctaSideOrnament {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .ctaSection {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .ctaButtons {
+    max-width: 100%;
+  }
+  .ctaBtn {
+    padding: 16px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ctaBtn {
+    font-size: 0.7rem;
+    padding: 14px 18px;
+    letter-spacing: 0.14em;
+  }
+}

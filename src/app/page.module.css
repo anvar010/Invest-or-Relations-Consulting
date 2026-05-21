@@ -1,0 +1,870 @@
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  padding: 50px 0 40px;
+  background: #f5efe2;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+  width: 100%;
+}
+
+.heroGrid>* {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  color: var(--grey);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 0.9em;
+}
+
+.heroSubtle {
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.hero :global(.cta-row) {
+  margin-top: 22px;
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-height: calc(100vh - 160px);
+  overflow: hidden;
+  border-radius: 14px;
+  background: #c9c4be;
+  box-shadow: 0 30px 60px -40px rgba(0, 0, 0, 0.25);
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.aboutImage {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 6px;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.aboutBadge {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  background: #f5efe2;
+  border: 1px solid rgba(184, 134, 43, 0.45);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  min-width: 140px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.aboutBadgeNumber {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #b8862b;
+  font-weight: 400;
+}
+
+.aboutBadgeLabel {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b8862b;
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .aboutBadge {
+    right: 0;
+    bottom: -12px;
+    padding: 18px 24px;
+    min-width: 140px;
+  }
+
+  .aboutBadgeNumber {
+    font-size: 2.4rem;
+  }
+
+  .aboutBadgeLabel {
+    font-size: 0.62rem;
+  }
+}
+
+.ctaPrimaryGold {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+}
+
+/* Final CTA banner */
+.ctaSection {
+  position: relative;
+  background: #0c1830;
+  color: #f4ecd8;
+  padding: 110px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 760px;
+}
+
+.ctaEyebrow {
+  color: #c9a14a;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  margin-bottom: 14px;
+}
+
+.ctaTopOrnament {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.ctaTopLine {
+  width: 36px;
+  height: 1px;
+  background: rgba(201, 161, 74, 0.55);
+}
+
+.ctaTopDiamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a14a;
+  transform: rotate(45deg);
+}
+
+.ctaHeading {
+  color: #f4ecd8 !important;
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  line-height: 1.15;
+  margin: 0 0 26px;
+  max-width: 640px;
+}
+
+.ctaParagraph {
+  color: rgba(244, 236, 216, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 0 36px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.ctaBtnPrimary {
+  background: #c9a14a;
+  color: #0c1830;
+}
+
+.ctaBtnPrimary:hover {
+  background: #d8b264;
+}
+
+.ctaBtnGhost {
+  background: transparent;
+  color: #f4ecd8;
+  border: 1px solid rgba(244, 236, 216, 0.35);
+}
+
+.ctaBtnGhost:hover {
+  border-color: rgba(244, 236, 216, 0.7);
+}
+
+.ctaBtnArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.ctaBtnPrimary .ctaBtnArrow {
+  background: #0c1830;
+  color: #c9a14a;
+}
+
+.ctaBtnGhost .ctaBtnArrow {
+  background: rgba(244, 236, 216, 0.12);
+  color: #f4ecd8;
+}
+
+.ctaBtn:hover .ctaBtnArrow {
+  transform: translateX(2px);
+}
+
+.ctaSideOrnament {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 22%;
+  max-width: 240px;
+  pointer-events: none;
+}
+
+.ctaSideLeft {
+  left: 0;
+}
+
+.ctaSideRight {
+  right: 0;
+  justify-content: flex-end;
+}
+
+.ctaSideLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(201, 161, 74, 0.45);
+}
+
+.ctaSideDiamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a14a;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .ctaSideOrnament {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ctaButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    font-size: 0.7rem;
+    padding: 14px 20px;
+    letter-spacing: 0.14em;
+  }
+
+  .ctaBtnArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .ctaSection {
+    padding: 80px 0;
+  }
+}
+
+.muted {
+  color: var(--grey);
+}
+
+.learnMore {
+  margin-top: 14px;
+}
+
+/* Investor Relations Consulting section */
+.ircSection {
+  background: #f5efe2;
+}
+
+.ircSplit {
+  align-items: stretch;
+  gap: 80px;
+}
+
+.ircSplit>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ircEyebrow {
+  position: relative;
+  margin-bottom: 32px;
+  color: #b8862b;
+  display: inline-block;
+}
+
+.ircEyebrow::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #b8862b;
+  margin-top: 12px;
+}
+
+.ircHeading {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.12;
+  margin: 0 0 22px;
+}
+
+.ircOrnament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 28px;
+  max-width: 460px;
+}
+
+.ircOrnamentLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.ircOrnamentDiamond {
+  width: 8px;
+  height: 8px;
+  background: #b8862b;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.ircCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.ircCtaArrow {
+  color: #b8862b;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ircFocusCard {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  padding: 56px 48px;
+  background: transparent;
+}
+
+.ircFocusList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 0;
+  position: relative;
+}
+
+.ircFocusList::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 50%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.06);
+  transform: translateX(-0.5px);
+}
+
+.ircFocusList li {
+  position: relative;
+  padding: 28px 0 28px 28px;
+  font-family: var(--font-serif, "Cormorant Garamond", "Playfair Display", Georgia, serif);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: #1a1a1a;
+}
+
+.ircFocusList li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  right: 20px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.ircFocusList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 39px;
+  width: 12px;
+  height: 1px;
+  background: #b8862b;
+}
+
+.ircFocusList li:nth-last-child(-n + 2)::after {
+  display: none;
+}
+
+.ircCtaUpper {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+}
+
+.ircFocusCardOpen {
+  border: none;
+  padding: 0 0 0 20px;
+}
+
+/* Tablet-only numbered card grid for IRC + Talent Advisory */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .ircSplit {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .ircSplit > div {
+    align-items: center;
+  }
+
+  .ircEyebrow,
+  .ircHeading {
+    text-align: center;
+  }
+
+  .ircEyebrow::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ircOrnament {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ircCta {
+    align-self: center;
+  }
+
+  .ircFocusCard,
+  .ircFocusCardOpen {
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .ircFocusCard > .ircEyebrow {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .ircFocusCard > .ircEyebrow::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ircFocusList,
+  .ircIconList {
+    counter-reset: focus;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 0;
+  }
+
+  .ircFocusList::before,
+  .ircIconList::before {
+    display: none;
+  }
+
+  .ircFocusList li,
+  .ircIconList li {
+    counter-increment: focus;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 22px 20px 24px;
+    margin: -0.5px 0 0 -0.5px;
+    min-height: 130px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: #1a1a1a;
+    gap: 14px;
+  }
+
+  .ircFocusList li::before,
+  .ircFocusList li::after,
+  .ircIconList li::before {
+    display: none;
+  }
+
+  .ircIconList .ircIconCircle {
+    display: none;
+  }
+
+  .ircFocusList li,
+  .ircIconList li {
+    position: relative;
+    padding-top: 46px;
+    align-items: stretch;
+  }
+
+  .ircIconLabel {
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ircFocusList li::before,
+  .ircIconList li::before {
+    content: counter(focus, decimal-leading-zero);
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: #b8862b;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+  }
+
+  .ircIconLabel {
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: #1a1a1a;
+  }
+
+  @media (max-width: 768px) {
+    .ircFocusList,
+    .ircIconList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.ircIconList {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 0;
+  position: relative;
+}
+
+.ircIconList::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 50%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateX(-0.5px);
+}
+
+.ircIconList li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ircIconList li:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.ircIconCircle {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(184, 134, 43, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ircIconLabel {
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #2a2a2a;
+}
+
+@media (max-width: 860px) {
+  .ircSection {
+    padding: 60px 0 40px;
+    /* Compress the 120px padding down */
+  }
+
+  .ircSection+.ircSection {
+    padding-top: 20px;
+    /* Collapse the gap between consecutive sections */
+  }
+
+  .ircSplit {
+    gap: 50px;
+  }
+
+  .ircFocusCard,
+  .ircFocusCardOpen {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .ircIconList {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    column-gap: 12px;
+  }
+
+  .ircIconList::before {
+    display: none;
+  }
+
+  .ircIconList li {
+    background: transparent;
+    border: 1px solid rgba(184, 134, 43, 0.25) !important;
+    border-radius: 16px;
+    padding: 20px 12px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    min-height: 110px;
+    justify-content: center;
+  }
+
+  .ircIconList li:last-child {
+    border: 1px solid rgba(184, 134, 43, 0.25) !important;
+  }
+
+  .ircFocusList {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    column-gap: 12px;
+  }
+
+  .ircFocusList::before {
+    display: none;
+  }
+
+  .ircFocusList li {
+    background: transparent;
+    border: 1px solid rgba(184, 134, 43, 0.25);
+    border-radius: 16px;
+    padding: 24px 12px;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+    box-shadow: none;
+  }
+
+  .ircFocusList li:nth-last-child(2)::after,
+  .ircFocusList li:last-child::after,
+  .ircFocusList li::after,
+  .ircFocusList li::before {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0 20px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .heroImage {
+    width: 100%;
+    aspect-ratio: 3/4;
+    max-width: 420px;
+    max-height: none;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero :global(.cta-row) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero :global(.cta-row) :global(.btn) {
+    width: 100%;
+    justify-content: space-between;
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+/* Tablet-only override (must come after base rules to win source-order tie) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 0 60px;
+  }
+
+  .ircSection {
+    padding: 60px 0 !important;
+  }
+
+  .ircSection + .ircSection {
+    padding-top: 0 !important;
+  }
+
+  .ircFocusList li:nth-child(5) {
+    grid-column-start: 2;
+  }
+
+  .ircIconList {
+    grid-template-columns: repeat(4, 1fr) !important;
+    column-gap: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ircIconList::before {
+    display: none !important;
+  }
+
+  .ircIconList li {
+    counter-increment: focus;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding: 46px 20px 24px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin: -0.5px 0 0 -0.5px;
+    min-height: 130px;
+    position: relative;
+  }
+
+  .ircIconList {
+    counter-reset: focus;
+  }
+
+  .ircIconList .ircIconCircle {
+    display: none !important;
+  }
+
+  .ircIconList li::before {
+    content: counter(focus, decimal-leading-zero);
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: #b8862b;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    background: transparent;
+    width: auto;
+    height: auto;
+  }
+
+  .ircIconLabel {
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: #1a1a1a;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .ircIconList {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}

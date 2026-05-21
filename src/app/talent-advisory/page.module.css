@@ -1,0 +1,536 @@
+/* ---------- Editorial hero ---------- */
+.heroEditorial {
+  background: #f5efe2;
+  padding: 6rem 0 4rem;
+}
+
+.heroEditorialInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #b89968;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.heroEditorialTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 0 0 2.2rem;
+  max-width: 880px;
+}
+
+.heroEditorialBody {
+  max-width: 820px;
+}
+
+.heroEditorialBody p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #5a5a5a;
+  font-weight: 300;
+  margin: 0 0 1.4rem;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.heroBtnPrimary {
+  background: #0a0a0a;
+  color: #f5efe2;
+  padding: 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.heroBtnPrimary:hover {
+  background: #2a2a2a;
+}
+
+.heroBtnGhost {
+  background: transparent;
+  color: #1a1a1a;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(26, 26, 26, 0.35);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.heroBtnGhost:hover {
+  border-color: #b89968;
+  color: #b89968;
+}
+
+.heroDivider {
+  height: 1px;
+  background: rgba(120, 105, 80, 0.25);
+  margin-top: 3.5rem;
+}
+
+@media (max-width: 720px) {
+  .heroEditorial {
+    padding: 3.5rem 0 2.5rem;
+  }
+  .heroEditorialInner {
+    padding: 0 1.5rem;
+  }
+  .heroBtnPrimary,
+  .heroBtnGhost {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* ---------- Shared design language (mirrors about page) ---------- */
+
+/* Split hero */
+.heroSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.heroLeft {
+  position: relative;
+  background: linear-gradient(135deg, #d9cfbd 0%, #e2d8c6 100%);
+  overflow: hidden;
+}
+
+.verticalLabel {
+  position: absolute;
+  left: 2.2rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  color: rgba(120, 105, 80, 0.7);
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.heroPortrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.cornerArc {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(120, 105, 80, 0.3);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.heroRight {
+  background: #f5efe2;
+  padding: 5rem 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #b89968;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 38px;
+  height: 1px;
+  background: #b89968;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  color: #1a1a1a;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+
+.heroBody p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  margin: 0 0 1.4rem;
+  font-weight: 300;
+}
+
+.locationPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2.2rem;
+}
+
+.locationPill {
+  border: 1px solid rgba(120, 95, 45, 0.55);
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6e5520;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Approach / relationship section */
+.approachSection {
+  background: #e7ddc9;
+  padding: 5rem 0;
+}
+
+.approachInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+.approachSticky {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.approachContent p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  font-weight: 300;
+  margin: 0 0 1.6rem;
+}
+
+.lightList {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.lightList li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #2a2a2a;
+  font-weight: 400;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.approachTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 1.8rem;
+}
+
+.approachTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+}
+
+.approachGrid p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5a5a5a;
+  font-weight: 300;
+  margin: 0 0 1.4rem;
+}
+
+/* Experience card */
+.experienceCard {
+  margin-top: 2.5rem;
+  background: #ded2bb;
+  border-radius: 4px;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.experienceNumber {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #b89968;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.experienceNumber span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  margin-top: 0.9rem;
+  font-weight: 400;
+}
+
+.experienceDivider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(120, 105, 80, 0.35);
+}
+
+.experienceText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Focus / numbered grid */
+.focusSection {
+  background: #f5efe2;
+  padding: 5rem 0;
+}
+
+.focusAlt {
+  background: #efe8d8;
+}
+
+.focusInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.focusTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin: 2rem 0 3rem;
+  max-width: 720px;
+}
+
+.focusTitle em {
+  font-style: italic;
+  color: #b89968;
+  font-weight: 400;
+}
+
+.focusGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusItem:nth-child(odd) {
+  border-right: 1px solid rgba(120, 105, 80, 0.25);
+}
+
+.focusNumber {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  color: #b89968;
+  letter-spacing: 0.1em;
+  min-width: 1.5rem;
+}
+
+.focusLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #2a2a2a;
+  font-weight: 400;
+}
+
+/* Dark network section */
+.networkSection {
+  background: #0a1628;
+  padding: 6rem 0;
+}
+
+.networkInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.eyebrowDark {
+  color: #b89968;
+}
+
+.eyebrowDark::before {
+  background: #b89968;
+}
+
+.networkTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f5efe2;
+  margin: 1.5rem 0 0;
+}
+
+.networkTitle em {
+  font-style: italic;
+  color: #c9a96b;
+  font-weight: 400;
+}
+
+.darkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.darkList li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #b8bfca;
+  font-weight: 300;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(201, 169, 107, 0.15);
+}
+
+.darkList li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .heroSplit {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .heroLeft {
+    min-height: 60vh;
+  }
+  .heroPortrait {
+    object-position: center 15%;
+  }
+  .heroRight {
+    padding: 3rem 1.5rem;
+  }
+  .verticalLabel { left: 1rem; }
+  .approachSection,
+  .networkSection { padding: 3.5rem 0; }
+  .approachInner,
+  .focusInner,
+  .networkInner {
+    padding: 0 1.5rem;
+  }
+  .approachGrid,
+  .networkInner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .approachSticky {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .focusSection { padding: 3rem 0; }
+  .focusGrid { grid-template-columns: 1fr; }
+  .focusItem:nth-child(odd) { border-right: none; }
+}
+
+@media (max-width: 640px) {
+  .experienceCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.5rem 1.2rem;
+  }
+  .experienceDivider {
+    width: 60px;
+    height: 1px;
+    align-self: center;
+  }
+}
