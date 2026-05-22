@@ -18,7 +18,7 @@
 .heroSplit {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  min-height: 82vh;
   width: 100%;
 }
 
@@ -55,6 +55,29 @@
   object-position: center 20%;
 }
 
+.heroPortraitTablet {
+  display: none;
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .heroPortrait {
+    display: none;
+  }
+  .heroPortraitTablet {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .heroLeft {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+}
+
 .heroImageOverlay {
   position: absolute;
   inset: 0;
@@ -75,7 +98,7 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  color: #f5efe2;
+  color: var(--bg);
   pointer-events: none;
 }
 
@@ -95,7 +118,7 @@
   font-size: clamp(2rem, 3.4vw, 2.8rem);
   font-weight: 400;
   line-height: 1;
-  color: #f5efe2;
+  color: var(--bg);
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
@@ -103,7 +126,7 @@
   display: block;
   width: 56px;
   height: 1px;
-  background: #c9a96b;
+  background: var(--gold);
   margin: 1.1rem 0 0.9rem;
 }
 
@@ -178,7 +201,7 @@
 }
 
 .heroRight {
-  background: #f5efe2;
+  background: var(--bg);
   padding: 5rem 5rem 4rem;
   display: flex;
   flex-direction: column;
@@ -194,14 +217,14 @@
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #b89968;
+  color: var(--gold);
 }
 
 .eyebrow::before {
   content: '';
   width: 38px;
   height: 1px;
-  background: #b89968;
+  background: var(--gold);
 }
 
 .heroTitle {
@@ -210,12 +233,12 @@
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 2.2rem;
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
 .heroTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
   margin-left: 0.4rem;
 }
@@ -233,7 +256,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
-  margin-top: 2.5rem;
+  margin-top: 1.2rem;
 }
 
 .locationPill {
@@ -251,7 +274,7 @@
 
 /* ---------- International Network ---------- */
 .networkSection {
-  background: #0a1628;
+  background: var(--dark);
   padding: 6rem 0;
 }
 
@@ -266,11 +289,11 @@
 }
 
 .eyebrowDark {
-  color: #b89968;
+  color: var(--gold);
 }
 
 .eyebrowDark::before {
-  background: #b89968;
+  background: var(--gold);
 }
 
 .networkTitle {
@@ -278,13 +301,13 @@
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #f5efe2;
+  color: var(--bg);
   margin: 1.5rem 0 0;
 }
 
 .networkTitle em {
   font-style: italic;
-  color: #c9a96b;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -322,7 +345,7 @@
 
 /* ---------- CTA section (matches network template) ---------- */
 .ctaSection {
-  background: #0a1628;
+  background: var(--dark);
   padding: 6rem 0;
   border-top: 1px solid rgba(201, 169, 107, 0.15);
 }
@@ -342,13 +365,13 @@
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #f5efe2;
+  color: var(--bg);
   margin: 1.5rem 0 0;
 }
 
 .ctaTitle em {
   font-style: italic;
-  color: #c9a96b;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -369,8 +392,8 @@
 }
 
 .ctaPrimary {
-  background: #c9a96b;
-  color: #0a1628;
+  background: var(--gold);
+  color: var(--dark);
   padding: 0.95rem 1.8rem;
   border-radius: 999px;
   font-family: 'Montserrat', sans-serif;
@@ -388,7 +411,7 @@
 
 .ctaSecondary {
   background: transparent;
-  color: #f5efe2;
+  color: var(--bg);
   padding: 0.95rem 1.8rem;
   border-radius: 999px;
   border: 1px solid rgba(245, 239, 226, 0.4);
@@ -402,8 +425,8 @@
 }
 
 .ctaSecondary:hover {
-  border-color: #c9a96b;
-  color: #c9a96b;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 @media (max-width: 900px) {
@@ -419,7 +442,7 @@
 
 /* ---------- Areas of Focus ---------- */
 .focusSection {
-  background: #f5efe2;
+  background: var(--bg);
   padding: 5rem 0;
 }
 
@@ -434,14 +457,14 @@
   font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 400;
   line-height: 1.25;
-  color: #1a1a1a;
+  color: var(--ink);
   margin: 2.5rem 0 3rem;
   max-width: 720px;
 }
 
 .focusTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -476,7 +499,7 @@
 .focusNumber {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 0.85rem;
-  color: #b89968;
+  color: var(--gold);
   letter-spacing: 0.1em;
   min-width: 1.5rem;
 }
@@ -561,13 +584,13 @@
   font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #1a1a1a;
+  color: var(--ink);
   margin: 0 0 1.8rem;
 }
 
 .approachTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -597,7 +620,7 @@
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1;
-  color: #b89968;
+  color: var(--gold);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -609,7 +632,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #6e6e6e;
+  color: var(--grey);
   margin-top: 0.9rem;
   font-weight: 400;
 }

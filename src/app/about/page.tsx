@@ -1,5 +1,5 @@
-import CTASection from "@/components/CTASection";
-import Reveal from "@/components/Reveal";
+import CTASection from "@/components/CTASection/CTASection";
+import Reveal from "@/components/Reveal/Reveal";
 import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
@@ -15,6 +15,11 @@ export default function AboutPage() {
             src="/image1.jpg"
             alt="Nicola Beer"
             className={styles.heroPortrait}
+          />
+          <img
+            src="/nicola-about1.webp"
+            alt="Nicola Beer"
+            className={styles.heroPortraitTablet}
           />
           <div className={styles.heroImageOverlay} aria-hidden="true" />
           <div className={styles.heroNameplate}>

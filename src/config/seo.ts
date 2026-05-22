@@ -59,16 +59,23 @@ function toMetadata({ title, description }: PageSEO): Metadata {
   return {
     title,
     description,
+    icons: {
+      icon: "/IRC-Logo.svg",
+      shortcut: "/logo2.png",
+      apple: "/logo2.png",
+    },
     openGraph: {
       title,
       description,
       siteName: SITE_NAME,
       type: "website",
+      images: ["/logo2.png"],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/logo2.png"],
     },
   };
 }

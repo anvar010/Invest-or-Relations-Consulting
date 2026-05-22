@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
+import Reveal from "@/components/Reveal/Reveal";
 import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
@@ -47,6 +47,10 @@ export default function ContactPage() {
               introductions, executive search, fundraising relationships, and
               relationship-led professional connections across the GCC and international
               financial markets.
+            </p>
+            <p>
+              Based in Dubai and available for meetings across the UAE, Saudi Arabia,
+              London, Geneva, and wider international financial centres.
             </p>
             <p>
               The initial conversation is designed to explore whether there is alignment

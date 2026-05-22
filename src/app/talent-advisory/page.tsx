@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CTASection from "@/components/CTASection";
-import Reveal from "@/components/Reveal";
+import CTASection from "@/components/CTASection/CTASection";
+import Reveal from "@/components/Reveal/Reveal";
 import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
@@ -160,6 +160,12 @@ export default function TalentPage() {
                 investor-facing businesses looking to strengthen their commercial
                 capabilities and expand strategically aligned professional networks.
               </p>
+              <p>
+                The approach is relationship-driven, discreet, and commercially focused,
+                with an emphasis on long-term partnerships and carefully considered
+                introductions.
+              </p>
+              <p className={styles.listLead}>Support includes:</p>
               <ul className={styles.lightList}>
                 {CLIENT_SUPPORT.map((c) => (
                   <li key={c}>{c}</li>
@@ -186,6 +192,10 @@ export default function TalentPage() {
                 exploring opportunities across investor relations, private banking,
                 fundraising, institutional sales, strategic partnerships, and
                 investor-facing business development.
+              </p>
+              <p>
+                The consultancy works with professionals seeking commercially aligned
+                opportunities within GCC and international financial markets.
               </p>
               <p>
                 Initial conversations are informal, discreet, and relationship-led, with a

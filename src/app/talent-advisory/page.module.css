@@ -1,6 +1,6 @@
 /* ---------- Editorial hero ---------- */
 .heroEditorial {
-  background: #f5efe2;
+  background: var(--bg);
   padding: 6rem 0 4rem;
 }
 
@@ -16,7 +16,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #b89968;
+  color: var(--gold);
   margin-bottom: 2rem;
   font-weight: 500;
 }
@@ -26,7 +26,7 @@
   font-size: clamp(2.2rem, 4.2vw, 3.6rem);
   font-weight: 400;
   line-height: 1.1;
-  color: #1a1a1a;
+  color: var(--ink);
   margin: 0 0 2.2rem;
   max-width: 880px;
 }
@@ -53,7 +53,7 @@
 
 .heroBtnPrimary {
   background: #0a0a0a;
-  color: #f5efe2;
+  color: var(--bg);
   padding: 1rem 2rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
@@ -70,7 +70,7 @@
 
 .heroBtnGhost {
   background: transparent;
-  color: #1a1a1a;
+  color: var(--ink);
   padding: 1rem 2rem;
   border: 1px solid rgba(26, 26, 26, 0.35);
   font-family: 'Montserrat', sans-serif;
@@ -83,8 +83,8 @@
 }
 
 .heroBtnGhost:hover {
-  border-color: #b89968;
-  color: #b89968;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .heroDivider {
@@ -159,7 +159,7 @@
 }
 
 .heroRight {
-  background: #f5efe2;
+  background: var(--bg);
   padding: 5rem 5rem 4rem;
   display: flex;
   flex-direction: column;
@@ -175,14 +175,14 @@
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #b89968;
+  color: var(--gold);
 }
 
 .eyebrow::before {
   content: '';
   width: 38px;
   height: 1px;
-  background: #b89968;
+  background: var(--gold);
 }
 
 .heroTitle {
@@ -191,12 +191,12 @@
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 2rem;
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
 .heroTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
   margin-left: 0.4rem;
 }
@@ -236,6 +236,10 @@
   padding: 5rem 0;
 }
 
+.approachSection + .approachSection {
+  padding-top: 0;
+}
+
 .approachInner {
   max-width: 1180px;
   margin: 0 auto;
@@ -265,6 +269,14 @@
   margin: 0 0 1.6rem;
 }
 
+.listLead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  font-weight: 500;
+  margin: 0.5rem 0 0.9rem;
+}
+
 .lightList {
   list-style: none;
   margin: 1rem 0 0;
@@ -287,13 +299,13 @@
   font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #1a1a1a;
+  color: var(--ink);
   margin: 0 0 1.8rem;
 }
 
 .approachTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -323,7 +335,7 @@
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1;
-  color: #b89968;
+  color: var(--gold);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,7 +347,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #6e6e6e;
+  color: var(--grey);
   margin-top: 0.9rem;
   font-weight: 400;
 }
@@ -357,7 +369,7 @@
 
 /* Focus / numbered grid */
 .focusSection {
-  background: #f5efe2;
+  background: var(--bg);
   padding: 5rem 0;
 }
 
@@ -376,14 +388,14 @@
   font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 400;
   line-height: 1.25;
-  color: #1a1a1a;
+  color: var(--ink);
   margin: 2rem 0 3rem;
   max-width: 720px;
 }
 
 .focusTitle em {
   font-style: italic;
-  color: #b89968;
+  color: var(--gold);
   font-weight: 400;
 }
 
@@ -411,7 +423,7 @@
 .focusNumber {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 0.85rem;
-  color: #b89968;
+  color: var(--gold);
   letter-spacing: 0.1em;
   min-width: 1.5rem;
 }
@@ -425,7 +437,7 @@
 
 /* Dark network section */
 .networkSection {
-  background: #0a1628;
+  background: var(--dark);
   padding: 6rem 0;
 }
 
@@ -440,11 +452,11 @@
 }
 
 .eyebrowDark {
-  color: #b89968;
+  color: var(--gold);
 }
 
 .eyebrowDark::before {
-  background: #b89968;
+  background: var(--gold);
 }
 
 .networkTitle {
@@ -452,13 +464,13 @@
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #f5efe2;
+  color: var(--bg);
   margin: 1.5rem 0 0;
 }
 
 .networkTitle em {
   font-style: italic;
-  color: #c9a96b;
+  color: var(--gold);
   font-weight: 400;
 }
 

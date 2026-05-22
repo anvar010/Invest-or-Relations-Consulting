@@ -1,7 +1,7 @@
 .ctaSection {
   position: relative;
-  background: #0c1830;
-  color: #f4ecd8;
+  background: var(--dark);
+  color: var(--ivory);
   padding: 110px 0;
   overflow: hidden;
   text-align: center;
@@ -17,7 +17,7 @@
 }
 
 .ctaEyebrow {
-  color: #c9a14a;
+  color: var(--gold);
   letter-spacing: 0.28em;
   font-size: 0.72rem;
   margin-bottom: 14px;
@@ -39,12 +39,12 @@
 .ctaTopDiamond {
   width: 6px;
   height: 6px;
-  background: #c9a14a;
+  background: var(--gold);
   transform: rotate(45deg);
 }
 
 .ctaHeading {
-  color: #f4ecd8 !important;
+  color: var(--ivory) !important;
   font-size: clamp(2rem, 3.6vw, 3.1rem);
   line-height: 1.15;
   margin: 0 0 26px;
@@ -86,8 +86,8 @@
 }
 
 .ctaBtnPrimary {
-  background: #c9a14a;
-  color: #0c1830;
+  background: var(--gold);
+  color: var(--dark);
 }
 
 .ctaBtnPrimary:hover {
@@ -96,7 +96,7 @@
 
 .ctaBtnGhost {
   background: transparent;
-  color: #f4ecd8;
+  color: var(--ivory);
   border: 1px solid rgba(244, 236, 216, 0.35);
 }
 
@@ -116,13 +116,13 @@
 }
 
 .ctaBtnPrimary .ctaBtnArrow {
-  background: #0c1830;
-  color: #c9a14a;
+  background: var(--dark);
+  color: var(--gold);
 }
 
 .ctaBtnGhost .ctaBtnArrow {
   background: rgba(244, 236, 216, 0.12);
-  color: #f4ecd8;
+  color: var(--ivory);
 }
 
 .ctaBtn:hover .ctaBtnArrow {
@@ -159,7 +159,7 @@
 .ctaSideDiamond {
   width: 6px;
   height: 6px;
-  background: #c9a14a;
+  background: var(--gold);
   transform: rotate(45deg);
   flex-shrink: 0;
 }

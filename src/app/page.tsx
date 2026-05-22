@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
-import CTASection from "@/components/CTASection";
+import Reveal from "@/components/Reveal/Reveal";
+import CTASection from "@/components/CTASection/CTASection";
 import styles from "./page.module.css";
 
 const EMAIL = "mailto:nbeer@investorrelationsconsulting.com";
 
 function TalentIcon({ name }: { name: string }) {
-  const stroke = "#b8862b";
+  const stroke = "var(--gold)";
   const common = {
     width: 26,
     height: 26,
@@ -164,15 +164,24 @@ export default function HomePage() {
               <span className={styles.ircCtaArrow} aria-hidden="true">→</span>
             </Link>
           </div>
-          <div className={styles.ircFocusCard}>
+          <div className={`${styles.ircFocusCard} ${styles.ircFocusCardOpen}`}>
             <span className={`eyebrow ${styles.ircEyebrow}`}>Areas of Focus</span>
-            <ul className={styles.ircFocusList}>
-              <li>Investor Relations Consulting</li>
-              <li>Strategic Partnerships</li>
-              <li>Placement &amp; Fundraising Relationships</li>
-              <li>Private Banking &amp; Family Office Networks</li>
-              <li>Investor Introductions</li>
-              <li>Alternative Investment Networks</li>
+            <ul className={styles.ircCardGrid}>
+              {[
+                { label: "Investor Relations Consulting", icon: "person" },
+                { label: "Strategic Partnerships", icon: "handshake" },
+                { label: "Placement & Fundraising Relationships", icon: "network" },
+                { label: "Private Banking & Family Office Networks", icon: "bank" },
+                { label: "Investor Introductions", icon: "people" },
+                { label: "Alternative Investment Networks", icon: "chart" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <span className={styles.ircCardIconCircle} aria-hidden="true">
+                    <TalentIcon name={item.icon} />
+                  </span>
+                  <span className={styles.ircCardLabel}>{item.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -232,7 +241,7 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT */}
-      <section className="section section-beige">
+      <section className={`section section-beige ${styles.aboutSection}`}>
         <div className="container split">
           <div className={styles.aboutImage}>
             <img src="/image1.jpg" alt="Nicola Beer" />

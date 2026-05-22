@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CTASection from "@/components/CTASection";
-import Reveal from "@/components/Reveal";
+import CTASection from "@/components/CTASection/CTASection";
+import Reveal from "@/components/Reveal/Reveal";
 import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
@@ -119,10 +119,6 @@ export default function IRPage() {
                 investor introductions, executive search, and commercially aligned
                 opportunities across GCC and international financial markets.
               </p>
-              <p>
-                Each engagement begins with a confidential conversation to understand the
-                firm&rsquo;s objectives, strategic priorities, and relationship requirements.
-              </p>
             </div>
           </div>
 
@@ -136,6 +132,10 @@ export default function IRPage() {
           <h2 className={styles.focusTitle}>
             Relationship-Led <em>Advisory Engagements</em>
           </h2>
+          <p className={styles.focusLead}>
+            Each engagement begins with a confidential conversation to understand the
+            firm&rsquo;s objectives, strategic priorities, and relationship requirements.
+          </p>
           <ul className={styles.focusGrid}>
             {APPROACH_ITEMS.map((item, i) => (
               <li key={item} className={styles.focusItem}>
@@ -144,6 +144,18 @@ export default function IRPage() {
               </li>
             ))}
           </ul>
+          <div className={styles.focusFooter}>
+            <p>
+              Where appropriate, the consultancy may also support direct introductions or
+              carefully selected outreach to relevant professionals, strategic partners,
+              private bankers, fundraising professionals, investor relations specialists, or
+              investment industry networks.
+            </p>
+            <p>
+              The approach is relationship-led, commercially focused, and built on
+              discretion, trust, and long-term professional relationships.
+            </p>
+          </div>
         </Reveal>
       </section>
 
