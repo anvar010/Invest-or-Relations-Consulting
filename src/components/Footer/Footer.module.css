@@ -1,7 +1,8 @@
 .footer {
-  background: #0d0d0d;
-  color: rgba(255, 255, 255, 0.75);
+  background: var(--bg);
+  color: var(--ink);
   padding: 80px 0 32px;
+  border-top: 1px solid rgba(200, 169, 107, 0.25);
 }
 
 .grid {
@@ -12,45 +13,70 @@
 }
 
 .footer h4 {
-  color: var(--ivory);
+  color: var(--ink);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
 }
 
 .footer a {
   display: block;
   padding: 6px 0;
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--ink);
+  transition: color 0.25s ease;
 }
 .footer a:hover { color: var(--gold); opacity: 1; }
 
 .brand {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: var(--ivory);
-  margin-bottom: 16px;
+  line-height: 1.2;
+  color: var(--ink);
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+.brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
 }
 .brand span { color: var(--gold); }
 
 .tagline {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--grey);
   font-size: 0.92rem;
   max-width: 360px;
 }
 
 .address {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--grey);
   font-size: 0.92rem;
   margin-top: 14px;
 }
 
 .disclaimer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   padding-top: 32px;
   margin-bottom: 28px;
 }
@@ -58,7 +84,7 @@
 .disclaimer p {
   font-size: 0.82rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--grey);
   margin: 0 0 14px;
   max-width: 1100px;
   font-weight: 300;
@@ -75,33 +101,34 @@
 }
 
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   padding-top: 22px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 18px;
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--grey);
 }
 
 .footer a.linkedin {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(200, 169, 107, 0.45);
   border-radius: 50%;
   margin-top: 14px;
   padding: 0;
-  color: rgba(255, 255, 255, 0.75);
-  transition: border-color 0.3s ease, color 0.3s ease;
+  color: var(--ink);
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
 }
 
 .footer a.linkedin:hover {
   border-color: var(--gold);
-  color: var(--gold);
+  color: var(--ivory);
+  background: var(--gold);
 }
 
 .footer a.linkedin svg {
