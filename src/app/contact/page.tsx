@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal/Reveal";
 import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
-const EMAIL = "nbeer@investorrelationsconsulting.com";
+const EMAIL = "nicola@investorrelationsconsulting.com";
 const MAILTO = `mailto:${EMAIL}`;
 
 export const metadata = seo.contact;
@@ -19,9 +19,18 @@ const REGIONS = [
   "Geneva",
 ];
 
+const PHONE = "+971 50 167 4313";
+const PHONE_DIGITS = "971501674313";
+
 const CHANNELS = [
   { label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, external: false },
-  { label: "WhatsApp", value: "Available on request", href: null, external: false },
+  { label: "Phone", value: PHONE, href: `tel:+${PHONE_DIGITS}`, external: false },
+  {
+    label: "WhatsApp",
+    value: PHONE,
+    href: `https://wa.me/${PHONE_DIGITS}`,
+    external: true,
+  },
   {
     label: "LinkedIn",
     value: "Nicola Beer",
@@ -50,7 +59,7 @@ export default function ContactPage() {
             </p>
             <p>
               Based in Dubai and available for meetings across the UAE, Saudi Arabia,
-              London, Geneva, and wider international financial centres.
+              London, and wider regional and international investor markets.
             </p>
             <p>
               The initial conversation is designed to explore whether there is alignment
@@ -132,7 +141,7 @@ export default function ContactPage() {
             <div>
               <p>
                 Based in Dubai and available for meetings across the UAE, Saudi Arabia,
-                London, Geneva, and wider international financial centres.
+                London, and wider regional and international investor markets.
               </p>
               <p>
                 Calls and meetings can be arranged in person, by phone, or via secure

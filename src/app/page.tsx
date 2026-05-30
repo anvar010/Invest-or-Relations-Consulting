@@ -3,7 +3,9 @@ import Reveal from "@/components/Reveal/Reveal";
 import CTASection from "@/components/CTASection/CTASection";
 import styles from "./page.module.css";
 
-const EMAIL = "mailto:nbeer@investorrelationsconsulting.com";
+const EMAIL = "mailto:nicola@investorrelationsconsulting.com";
+const BOOKING_URL =
+  "https://calendly.com/nicola-investorrelationsconsulting/confidential-introduction-call";
 
 function TalentIcon({ name }: { name: string }) {
   const stroke = "var(--gold)";
@@ -111,7 +113,12 @@ export default function HomePage() {
               broader GCC markets.
             </p>
             <div className="cta-row">
-              <Link href="/contact" className="btn btn-primary">
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
                 Arrange a Confidential Introduction Call
                 <span className="btn-arrow" aria-hidden="true">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -119,7 +126,7 @@ export default function HomePage() {
                     <polyline points="13 6 19 12 13 18" />
                   </svg>
                 </span>
-              </Link>
+              </a>
               <a href={EMAIL} className="btn btn-secondary">
                 Email Nicola
               </a>

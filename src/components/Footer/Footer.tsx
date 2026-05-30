@@ -42,8 +42,8 @@ export default function Footer() {
 
           <div>
             <h4>Contact</h4>
-            <a href="mailto:nbeer@investorrelationsconsulting.com">
-              nbeer@investorrelationsconsulting.com
+            <a href="mailto:nicola@investorrelationsconsulting.com">
+              nicola@investorrelationsconsulting.com
             </a>
             <p className={styles.address}>
               Dubai · UAE

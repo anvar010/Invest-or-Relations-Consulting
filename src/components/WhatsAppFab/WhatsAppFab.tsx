@@ -1,6 +1,6 @@
 import styles from "./WhatsAppFab.module.css";
 
-const WHATSAPP_NUMBER = "971500000000";
+const WHATSAPP_NUMBER = "971501674313";
 const WHATSAPP_MESSAGE =
   "Hello Nicola, I would like to arrange a confidential introduction call.";
 
