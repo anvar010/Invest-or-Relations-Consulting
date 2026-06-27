@@ -175,14 +175,14 @@
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--ink);
 }
 
 .eyebrow::before {
   content: '';
   width: 38px;
   height: 1px;
-  background: var(--gold);
+  background: var(--ink);
 }
 
 .heroTitle {
@@ -492,6 +492,21 @@
 
 .darkList li:last-child {
   border-bottom: none;
+}
+
+/* Roles I Recruit — stronger contrast on focusAlt cream background */
+.rolesSection .focusNumber {
+  color: var(--ink);
+}
+.rolesSection .focusLabel {
+  color: var(--ink);
+  font-weight: 500;
+}
+.rolesSection .focusItem {
+  border-color: rgba(17, 17, 17, 0.15);
+}
+.rolesSection .focusGrid {
+  border-color: rgba(17, 17, 17, 0.15);
 }
 
 /* Responsive */

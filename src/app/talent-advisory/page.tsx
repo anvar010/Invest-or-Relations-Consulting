@@ -9,6 +9,15 @@ const BOOKING_URL =
 
 export const metadata = seo.talentAdvisory;
 
+const ROLES_RECRUITED = [
+  "Private Equity (Associate to Partner/MD)",
+  "Investment Management",
+  "Chief Investment Officers (CIOs)",
+  "Real Estate Investment & Asset Management",
+  "M&A & Corporate Finance",
+  "Leveraged Finance & Debt Capital Markets",
+];
+
 const FOCUS_AREAS = [
   "Investor Relations",
   "Institutional Sales",
@@ -141,6 +150,24 @@ export default function TalentPage() {
           </h2>
           <ul className={styles.focusGrid}>
             {FOCUS_AREAS.map((item, i) => (
+              <li key={item} className={styles.focusItem}>
+                <span className={styles.focusNumber}>{String(i + 1).padStart(2, "0")}</span>
+                <span className={styles.focusLabel}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      {/* ROLES I RECRUIT */}
+      <section className={`${styles.focusSection} ${styles.focusAlt} ${styles.rolesSection}`}>
+        <Reveal className={styles.focusInner}>
+          <div className={styles.eyebrow}>Roles I Recruit</div>
+          <h2 className={styles.focusTitle}>
+            Roles I Recruit Across <em>Investment &amp; Finance</em>
+          </h2>
+          <ul className={styles.focusGrid}>
+            {ROLES_RECRUITED.map((item, i) => (
               <li key={item} className={styles.focusItem}>
                 <span className={styles.focusNumber}>{String(i + 1).padStart(2, "0")}</span>
                 <span className={styles.focusLabel}>{item}</span>
