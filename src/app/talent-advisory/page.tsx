@@ -4,8 +4,9 @@ import { seo } from "@/config/seo";
 import styles from "./page.module.css";
 
 const EMAIL = "mailto:nicola@investorrelationsconsulting.com";
-const BOOKING_URL =
-  "https://calendly.com/nicola-investorrelationsconsulting/confidential-introduction-call";
+const BOOKING_URL = `https://wa.me/971501674313?text=${encodeURIComponent(
+  "Hello Nicola, I would like to arrange a confidential introduction call."
+)}`;
 
 export const metadata = seo.talentAdvisory;
 
@@ -76,6 +77,10 @@ export default function TalentPage() {
               management and business development experience.
             </p>
           </div>
+          <p>
+            Interested in discussing an opportunity or potential collaboration? Contact me
+            by WhatsApp or email to arrange a complimentary introductory call.
+          </p>
           <div className="cta-row">
             <a
               href={BOOKING_URL}

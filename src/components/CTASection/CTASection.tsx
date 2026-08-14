@@ -2,8 +2,9 @@ import Link from "next/link";
 import styles from "./CTASection.module.css";
 
 const DEFAULT_EMAIL = "mailto:nicola@investorrelationsconsulting.com";
-const BOOKING_URL =
-  "https://calendly.com/nicola-investorrelationsconsulting/confidential-introduction-call";
+const BOOKING_URL = `https://wa.me/971501674313?text=${encodeURIComponent(
+  "Hello Nicola, I would like to arrange a confidential introduction call."
+)}`;
 
 const ArrowIcon = () => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -50,6 +51,10 @@ export default function CTASection({
         </div>
         <h2 className={styles.ctaHeading}>{heading}</h2>
         <p className={styles.ctaParagraph}>{paragraph}</p>
+        <p className={styles.ctaParagraph}>
+          Interested in discussing an opportunity or potential collaboration? Contact me
+          by WhatsApp or email to arrange a complimentary introductory call.
+        </p>
         <div className={styles.ctaButtons}>
           <Link
             href={primaryHref}

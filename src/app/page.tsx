@@ -4,8 +4,9 @@ import CTASection from "@/components/CTASection/CTASection";
 import styles from "./page.module.css";
 
 const EMAIL = "mailto:nicola@investorrelationsconsulting.com";
-const BOOKING_URL =
-  "https://calendly.com/nicola-investorrelationsconsulting/confidential-introduction-call";
+const BOOKING_URL = `https://wa.me/971501674313?text=${encodeURIComponent(
+  "Hello Nicola, I would like to arrange a confidential introduction call."
+)}`;
 
 function TalentIcon({ name }: { name: string }) {
   const stroke = "var(--gold)";
@@ -111,6 +112,10 @@ export default function HomePage() {
               Supporting investment firms, private banks, family offices, placement professionals,
               and investor-facing businesses across Dubai, Abu Dhabi, Riyadh, London, Geneva, and
               broader GCC markets.
+            </p>
+            <p>
+              Interested in discussing an opportunity or potential collaboration? Contact
+              me by WhatsApp or email to arrange a complimentary introductory call.
             </p>
             <div className="cta-row">
               <a
